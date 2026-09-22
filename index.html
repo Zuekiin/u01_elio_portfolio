@@ -20,55 +20,71 @@
       href="https://cdn.jsdelivr.net/npm/simple-icons-font@16/font/simple-icons.min.css"
     />
 
-    <!-- CSS File -->
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="src/CSS/reset.css" />
     <link rel="stylesheet" href="src/CSS/style.css" />
   </head>
   <body>
     <!-- Header -->
     <header>
-      <a href="" aria-label="Go Home">
-        <img src="src/img/pavan_logo.png" alt="Pavan Logo" />
-      </a>
+      <div class="mobile-nav">
+        <a class="logo brand-gradient" href="#">
+          {007}
+          <p>pavanmg</p>
+        </a>
 
-      <!-- Hamburger button -->
-      <button
-        type="button"
-        class="hamburger-btn"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-        aria-controls="primary-nav"
-      >
-        <!-- These 3 spans create the visual "hamburger" lines -->
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
+        <!-- Hamburger button -->
+        <button
+          type="button"
+          class="hamburger-btn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <!-- These 3 spans create the visual "hamburger" lines -->
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
 
       <!-- Navbar -->
-      <nav aria-label="Main Navigation">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Tech Stack</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <nav class="nav-links" aria-label="Main Navigation">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Tech Stack</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
 
-      <!-- Social links -->
-      <nav aria-label="Social Links">
-        <ul>
-          <li>
-            <a href=""><i class="fa-brands fa-github"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-          </li>
-        </ul>
-      </nav>
+        <!-- Social links -->
+        <nav class="social-links" aria-label="Social Links">
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>

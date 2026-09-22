@@ -1,142 +1,171 @@
-/* CSS Reset */
-@layer {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-  }
+/* CSS Varables */
+:root {
+  /* Colors */
+  --color-text-white: #fff;
+  --color-text-muted: #666666;
 
-  * {
-    padding: 0;
-    margin: 0;
-  }
+  /* Gradients */
+  --gradient-brand: linear-gradient(90deg, #13b0f5, #ca24b4);
+  --gradient-heading: linear-gradient(90deg, #13b0f5, #e70faa);
 
-  html {
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    block-size: 100%;
-  }
+  /* Layout */
+  --main-container: 999px;
+}
 
-  body {
-    min-block-size: 100%;
-  }
+body {
+  font-family: "Poppins", sans-serif;
+}
 
-  img,
-  iframe,
-  audio,
-  video,
-  canvas {
-    display: block;
-    max-inline-size: 100%;
-    block-size: auto;
-  }
+/* Header */
+header {
+  max-width: var(--main-container);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
 
-  svg {
-    max-inline-size: 100%;
-  }
+  /* logo */
+  .logo {
+    text-align: center;
+    line-height: 1;
+    font-family: "Inconsolata", monospace;
+    font-weight: 900;
+    font-size: 32px;
 
-  svg:not([fill]) {
-    fill: currentColor;
-  }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  fieldset,
-  iframe {
-    border: none;
-  }
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    overflow-wrap: break-word;
-  }
-
-  p {
-    text-wrap: pretty;
-    font-variant-numeric: proportional-nums;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-variant-numeric: lining-nums;
-  }
-
-  p,
-  blockquote,
-  q,
-  figcaption,
-  li {
-    hanging-punctuation: first allow-end last;
-  }
-
-  input,
-  label,
-  button,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.1;
-  }
-
-  math,
-  time,
-  table {
-    font-variant-numeric: tabular-nums lining-nums slashed-zero;
-  }
-
-  code {
-    font-variant-numeric: slashed-zero;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  abbr {
-    font-variant-caps: all-small-caps;
-    text-decoration: none;
-
-    &[title] {
-      cursor: help;
-      text-decoration: underline dotted;
+    p {
+      font-size: 20px;
     }
   }
 
-  sup,
-  sub {
-    line-height: 0;
+  /* link list */
+  ul {
+    display: flex;
   }
 
-  :disabled {
-    opacity: 0.8;
-    cursor: not-allowed;
+  /* Hamburger button */
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+
+    .line {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+      transform-origin: center;
+    }
+
+    @media screen and (min-width: 821px) {
+      display: none;
+    }
   }
 
-  :focus-visible {
-    outline-offset: 0.2rem;
+  .nav-container {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+
+    a {
+      color: var(--color-text-muted);
+    }
+
+    .nav-links {
+      ul {
+        gap: 48px;
+
+        @media screen and (max-width: 820px) {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    .social-links {
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        @media screen and (max-width: 820px) {
+          max-width: 300px;
+          margin-inline: auto;
+          justify-content: space-between;
+        }
+      }
+
+      i {
+        display: block; /* prevents baseline gap */
+      }
+
+      li:first-child a {
+        font-size: 24px;
+      }
+
+      li:nth-last-child(-n + 2) a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-text-white);
+        background-color: var(--color-text-muted);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-inline: 3px;
+      }
+
+      @media screen and (max-width: 820px) {
+        margin-top: 24px;
+      }
+    }
+
+    @media screen and (max-width: 820px) {
+      display: block;
+      gap: 8px;
+    }
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 820px) {
+    display: block;
+    text-align: center;
   }
 }
+
+/* Utilities */
+
+/* Text gradients */
+
+.brand-gradient {
+  background-image: var(--gradient-brand);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.heading-gradient {
+  background-image: var(--gradient-heading);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ============================================= */
