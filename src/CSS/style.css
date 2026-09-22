@@ -7,13 +7,29 @@
   /* Gradients */
   --gradient-brand: linear-gradient(90deg, #13b0f5, #ca24b4);
   --gradient-heading: linear-gradient(90deg, #13b0f5, #e70faa);
+  --gradient-border: linear-gradient(0deg, #13b0f5, #e70faa);
 
-  /* Layout */
+  /* Fonts */
+  --font-size-h1: clamp(14px, 0.5625rem + 1.6667vw, 24px);
+
+  /* Image size */
+  --img-width: clamp(260px, 226px + 11.333vw, 300px);
+
+  /* Layouts */
   --main-container: 999px;
+
+  /* Spacing */
+  --main-spacing: 24px;
+  --section-spacing: clamp(50px, 25px + 8.333vw, 100px);
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  padding: var(--main-spacing);
+}
+
+section {
+  padding-block: var(--section-spacing);
 }
 
 /* Header */
@@ -22,7 +38,6 @@ header {
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
-  padding: 24px;
 
   /* logo */
   .logo {
@@ -148,9 +163,41 @@ header {
   }
 }
 
-/* Utilities */
+/* Hero */
+.hero-section {
+  max-width: var(--main-container);
+  margin: auto;
+  font-size: var(--font-size-h1);
 
-/* Text gradients */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    line-height: 1.2;
+  }
+
+  img {
+    width: var(--img-width);
+  }
+
+  @media screen and (max-width: 840px) {
+    flex-direction: column-reverse;
+
+    h1 {
+      margin-top: var(--main-spacing);
+      text-align: center;
+    }
+  }
+}
+
+/* 
+===========================================
+Utilities
+===========================================
+*/
+
+/* Text & border gradients */
 
 .brand-gradient {
   background-image: var(--gradient-brand);
@@ -168,4 +215,9 @@ header {
   color: transparent;
 }
 
-/* ============================================= */
+.img-wrapper {
+  display: inline-block;
+  padding: 9px;
+  background: var(--gradient-border);
+  border-radius: 50%;
+}
