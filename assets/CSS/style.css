@@ -242,6 +242,8 @@ body {
     span {
       font-size: 10px;
       font-weight: 600;
+      width: 80px;
+      text-align: center;
       padding: 4px 12px;
       border-radius: 60px;
       background-color: var(--color-text-success);
@@ -280,6 +282,38 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+/* My Tech Stack */
+.myTeckStack-section {
+  max-width: var(--main-container);
+  margin: auto;
+
+  h2 {
+    margin-bottom: var(--main-spacing);
+  }
+
+  .icon {
+    width: auto;
+    height: 5em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .mystack-gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 50px;
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (max-width: 426px) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
