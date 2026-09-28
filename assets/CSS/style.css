@@ -4,6 +4,7 @@
   --color-text-white: #fff;
   --color-text-muted: #666666;
   --color-text-muted-light: #9b9b9b;
+  --color-text-black: #000;
 
   --color-brand1: #13b0f5;
   --color-brand2: #e70faa;
@@ -33,6 +34,7 @@
   --main-container: 999px;
 
   /* Spacing */
+  --small-spacing: 16px;
   --main-spacing: 24px;
   --section-spacing-medium: clamp(25px, 12.5px + 4.1667vw, 50px);
   --section-spacing-large: clamp(50px, 25px + 8.333vw, 100px);
@@ -314,6 +316,77 @@ body {
 
     @media screen and (max-width: 426px) {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+/* My projects */
+.projects-section {
+  width: 100%;
+  max-width: var(--main-container);
+  margin: auto;
+
+  /* Project cards */
+  .article-cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 30px;
+    row-gap: 50px;
+    margin-inline: auto;
+
+    article {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 5;
+      gap: var(--main-spacing);
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: clamp(200px, 40vw, 250px);
+        border-radius: 20px 20px 0 0;
+      }
+
+      /* Card content */
+      .article-content {
+        color: var(--color-text-muted);
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 4;
+        gap: var(--small-spacing);
+        padding: 0 var(--small-spacing) var(--small-spacing)
+          var(--small-spacing);
+
+        h3 {
+          color: var(--color-text-black);
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        .card-stack {
+          font-size: 14px;
+
+          span {
+            font-weight: 600;
+          }
+        }
+
+        footer {
+          color: var(--color-text-black);
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          a {
+            color: var(--color-text-black);
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }
