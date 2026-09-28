@@ -25,6 +25,7 @@
   );
 
   /* Fonts */
+  --font-size-text: clamp(8px, -0.1429rem + 2.2857vw, 16px);
   --font-size-heading: clamp(14px, 0.5625rem + 1.6667vw, 24px);
 
   /* Image size */
@@ -377,10 +378,12 @@ body {
         }
 
         footer {
+          width: 100%;
           color: var(--color-text-black);
           display: flex;
           justify-content: space-between;
           font-size: 14px;
+
           a {
             color: var(--color-text-black);
             text-decoration: underline;
@@ -391,6 +394,27 @@ body {
   }
 }
 
+/* Contact */
+
+.contact-section {
+  max-width: var(--main-container);
+  margin: auto;
+  text-align: center;
+  font-size: var(--font-size-heading);
+
+  a {
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+}
+
+footer {
+  color: var(--color-text-muted-light);
+  max-width: var(--main-container);
+  margin: auto;
+  text-align: center;
+  font-size: var(--font-size-text);
+}
 /* 
 ===========================================
 Utilities
