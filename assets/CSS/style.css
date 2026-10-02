@@ -1,3 +1,5 @@
+/* Styles CSS */
+
 /* Header */
 .header {
   max-width: var(--main-container);
@@ -11,10 +13,10 @@
     line-height: 1;
     font-family: "Inconsolata", monospace;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 2rem;
 
     p {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
 
@@ -62,6 +64,10 @@
       color: var(--color-text-muted);
     }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
     .nav-links {
       ul {
         gap: 48px;
@@ -69,6 +75,11 @@
         @media screen and (max-width: 921px) {
           display: block;
           text-align: center;
+          font-weight: 700;
+        }
+
+        a {
+          color: var(--color-text-black);
         }
       }
     }
@@ -152,7 +163,7 @@
   p,
   section {
     max-width: 70%;
-    font-size: 18px;
+    font-size: 1.125rem;
 
     @media screen and (max-width: 921px) {
       max-width: 100%;
@@ -177,12 +188,12 @@
 
     p {
       color: var(--color-text-muted-light);
-      font-size: 12px;
+      font-size: 0.75rem;
     }
 
     span {
       color: var(--color-text-success);
-      font-size: 10px;
+      font-size: 0.625rem;
       font-weight: 600;
       width: 80px;
       text-align: center;
@@ -308,12 +319,12 @@
 
         h3 {
           color: var(--color-text-black);
-          font-size: 20px;
+          font-size: 1.25rem;
           font-weight: 500;
         }
 
         .card-stack {
-          font-size: 14px;
+          font-size: 0.875rem;
 
           span {
             font-weight: 600;
@@ -325,7 +336,7 @@
           color: var(--color-text-black);
           display: flex;
           justify-content: space-between;
-          font-size: 14px;
+          font-size: 0.875rem;
 
           a {
             color: var(--color-text-black);
