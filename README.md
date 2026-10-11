@@ -1,6 +1,6 @@
 # README – Portfolio för Pavan MG
 
-**Publicerad sida:** [https://zuekiin.github.io/u01_elio_portfolio/#about]
+**Publicerad sida:** [https://zuekiin.github.io/u01_elio_portfolio/]
 
 ![Skärmdump av den färdiga sidan](./assets/img/screenshot-hero.png)
 
